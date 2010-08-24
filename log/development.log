@@ -1,0 +1,140 @@
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (127.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (74.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateInventories (20100824172355)
+  [4;36;1mSQL (124.1ms)[0m   [0;1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Server_location" varchar(255), "Server_name" varchar(255), "Server_type" varchar(255), "OS_version" varchar(255), "Hardware_type" varchar(255), "Model" varchar(255), "CPU_speed" decimal, "Number_of_cpus" integer, "Installed_ram" decimal, "ip_address" varchar(255), "Management_ip" varchar(255), "Rack_Location" varchar(255), "Note" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (105.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100824172355')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-24 12:25:07) [GET]
+
+
+ActionController::RoutingError (No route matches "/invetories" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rsouthard/projects/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-08-24 12:25:48) [GET]
+  [4;36;1mInventory Load (0.5ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#new (for 127.0.0.1 at 2010-08-24 12:25:51) [GET]
+Rendering template within layouts/inventories
+Rendering inventories/new
+Completed in 59ms (View: 54, DB: 0) | 200 OK [http://localhost/inventories/new]
+
+
+Processing InventoriesController#create (for 127.0.0.1 at 2010-08-24 12:51:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0ac1dca18bceaf7a8df41362715058ca134e540a", "inventory"=>{"Number_of_cpus"=>"", "Model"=>"", "Server_type"=>"dev/test database server", "Rack_Location"=>"", "Management_ip"=>"", "Installed_ram"=>"", "OS_version"=>"Oracle 5U5 x85_64", "Hardware_type"=>"IBM", "CPU_speed"=>"", "Server_name"=>"svd0odbd01", "Server_location"=>"Arsalon", "Note"=>"", "ip_address"=>""}}
+  [4;36;1mInventory Create (0.3ms)[0m   [0;1mINSERT INTO "inventories" ("Number_of_cpus", "created_at", "Server_type", "Model", "updated_at", "OS_version", "Installed_ram", "Management_ip", "Rack_Location", "Hardware_type", "Server_name", "CPU_speed", "Server_location", "Note", "ip_address") VALUES(NULL, '2010-08-24 17:51:37', 'dev/test database server', '', '2010-08-24 17:51:37', 'Oracle 5U5 x85_64', NULL, '', '', 'IBM', 'svd0odbd01', NULL, 'Arsalon', '', '')[0m
+Redirected to #<Inventory:0x7f864f510040>
+Completed in 128ms (DB: 0) | 302 Found [http://localhost/inventories]
+
+
+Processing InventoriesController#show (for 127.0.0.1 at 2010-08-24 12:51:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInventory Load (0.3ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."id" = 1) [0m
+Rendering template within layouts/inventories
+Rendering inventories/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/inventories/1]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-08-24 12:51:41) [GET]
+  [4;36;1mInventory Load (0.4ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#edit (for 127.0.0.1 at 2010-08-24 12:51:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInventory Load (0.3ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."id" = 1) [0m
+Rendering template within layouts/inventories
+Rendering inventories/edit
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/inventories/1/edit]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-08-24 13:01:00) [GET]
+  [4;36;1mInventory Load (0.5ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#show (for 127.0.0.1 at 2010-08-24 13:01:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInventory Load (0.3ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."id" = 1) [0m
+Rendering template within layouts/inventories
+Rendering inventories/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/inventories/1]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-08-24 13:01:05) [GET]
+  [4;36;1mInventory Load (0.4ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/inventories]

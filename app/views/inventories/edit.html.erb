@@ -1,0 +1,64 @@
+<h1>Editing inventory</h1>
+
+<% form_for(@inventory) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Server_location %><br />
+    <%= f.text_field :Server_location %>
+  </p>
+  <p>
+    <%= f.label :Server_name %><br />
+    <%= f.text_field :Server_name %>
+  </p>
+  <p>
+    <%= f.label :Server_type %><br />
+    <%= f.text_field :Server_type %>
+  </p>
+  <p>
+    <%= f.label :OS_version %><br />
+    <%= f.text_field :OS_version %>
+  </p>
+  <p>
+    <%= f.label :Hardware_type %><br />
+    <%= f.text_field :Hardware_type %>
+  </p>
+  <p>
+    <%= f.label :Model %><br />
+    <%= f.text_field :Model %>
+  </p>
+  <p>
+    <%= f.label :CPU_speed %><br />
+    <%= f.text_field :CPU_speed %>
+  </p>
+  <p>
+    <%= f.label :Number_of_cpus %><br />
+    <%= f.text_field :Number_of_cpus %>
+  </p>
+  <p>
+    <%= f.label :Installed_ram %><br />
+    <%= f.text_field :Installed_ram %>
+  </p>
+  <p>
+    <%= f.label :ip_address %><br />
+    <%= f.text_field :ip_address %>
+  </p>
+  <p>
+    <%= f.label :Management_ip %><br />
+    <%= f.text_field :Management_ip %>
+  </p>
+  <p>
+    <%= f.label :Rack_Location %><br />
+    <%= f.text_field :Rack_Location %>
+  </p>
+  <p>
+    <%= f.label :Note %><br />
+    <%= f.text_field :Note %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @inventory %> |
+<%= link_to 'Back', inventories_path %>

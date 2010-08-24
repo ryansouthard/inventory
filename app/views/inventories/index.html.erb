@@ -1,0 +1,44 @@
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Server location</th>
+    <th>Server name</th>
+    <th>Server type</th>
+    <th>Os version</th>
+    <th>Hardware type</th>
+    <th>Model</th>
+    <th>Cpu speed</th>
+    <th>Number of cpus</th>
+    <th>Installed ram</th>
+    <th>Ip address</th>
+    <th>Management ip</th>
+    <th>Rack location</th>
+    <th>Note</th>
+  </tr>
+
+<% for inventory in @inventories %>
+  <tr>
+    <td><%=h inventory.Server_location %></td>
+    <td><%=h inventory.Server_name %></td>
+    <td><%=h inventory.Server_type %></td>
+    <td><%=h inventory.OS_version %></td>
+    <td><%=h inventory.Hardware_type %></td>
+    <td><%=h inventory.Model %></td>
+    <td><%=h inventory.CPU_speed %></td>
+    <td><%=h inventory.Number_of_cpus %></td>
+    <td><%=h inventory.Installed_ram %></td>
+    <td><%=h inventory.ip_address %></td>
+    <td><%=h inventory.Management_ip %></td>
+    <td><%=h inventory.Rack_Location %></td>
+    <td><%=h inventory.Note %></td>
+    <td><%= link_to 'Show', inventory %></td>
+    <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+    <td><%= link_to 'Destroy', inventory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New inventory', new_inventory_path %>

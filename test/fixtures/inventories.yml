@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Server_location: MyString
+  Server_name: MyString
+  Server_type: MyString
+  OS_version: MyString
+  Hardware_type: MyString
+  Model: MyString
+  CPU_speed: 9.99
+  Number_of_cpus: 1
+  Installed_ram: 9.99
+  ip_address: MyString
+  Management_ip: MyString
+  Rack_Location: MyString
+  Note: MyString
+
+two:
+  Server_location: MyString
+  Server_name: MyString
+  Server_type: MyString
+  OS_version: MyString
+  Hardware_type: MyString
+  Model: MyString
+  CPU_speed: 9.99
+  Number_of_cpus: 1
+  Installed_ram: 9.99
+  ip_address: MyString
+  Management_ip: MyString
+  Rack_Location: MyString
+  Note: MyString
